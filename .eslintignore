@@ -3,3 +3,5 @@ coverage/
 node_modules/
 apis/snapshooter/client.js
 apis/*/core/**/*.js
+commands/serve/web/eRender.js
+commands/serve/web/render-fixture.js

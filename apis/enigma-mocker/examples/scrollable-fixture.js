@@ -8,7 +8,7 @@ function Data() {
     // Get response for specified arguments
     get(...args) {
       const match = entries.find((entry) => JSON.stringify(entry.args) === JSON.stringify(args));
-      return match?.response;
+      return match ? match.response : undefined;
     },
     // Add a response for specified arguments
     add(args, response) {
@@ -1675,6 +1675,6 @@ const genericObject = {
 };
 
 (async () => {
-  const app = await EnigmaMocker.fromGenericObjects(genericObject);
+  const app = await EnigmaMocker.fromGenericObjects([genericObject]);
   // const nebbie = embed(app, { ... config });
 })();
